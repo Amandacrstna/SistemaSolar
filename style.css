@@ -1,0 +1,95 @@
+body{
+    margin: o;
+    padding: 0;
+    background: url(universo3.jpg);
+}
+
+.center{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.center .sun{
+
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #dc2f02;
+    box-shadow: 0 0 15px rgba(255, 81, 0, 0.5),
+                0 0 30px rgba(255, 81, 0, 0.5),
+                0 0 45px rgba(255, 81, 0, 0.5),
+                0 0 60px rgba(255, 81, 0, 0.5),
+                0 0 15px rgba(255, 81, 0, 0.5);
+    
+}
+
+.center .sun .earth{
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 50%;
+    width: 200px;
+    height: 2px;
+    
+    transform-origin: left;
+    animation: rotate 10s linear infinite;
+}
+
+.center .sun .earth:before{
+    content: url();
+    position: absolute;
+    top: -25px;
+    width: 50px;
+    right: 0;
+    border-radius: 50%;
+    height: 50px;
+    background: seagreen;
+    box-shadow: 0 0 15px rgba(0, 155, 255, 0.5),
+                0 0 30px rgba(0, 155, 255, 0.5),
+                0 0 45px rgba(0, 155, 255, 0.5),
+                0 0 60px rgba(0, 155, 255, 0.5),
+                0 0 15px rgba(0, 155, 255, 0.5);
+                animation: rotate 10s linear infinite;
+
+}
+
+.center .sun .earth .moon{
+    position: absolute;
+    right: 25px;
+    width: 60px;
+    height: 1px;
+    
+    transform-origin: right;
+    animation: rotate 2s linear infinite;
+}
+
+.center .sun .earth .moon:before{
+    content: url();
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: grey;
+   
+
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
